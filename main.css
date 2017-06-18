@@ -2,3 +2,24 @@
  color: red;
  font-size: 4px;
 }
+
+
+
+#nav {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ font-size: 0;
+}
+
+
+.nav-options {
+ display: inline-block;
+ width: 25%;
+ font-size: 20px;
+ 
+}
+
+
+
