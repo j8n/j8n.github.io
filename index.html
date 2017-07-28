@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title> j8n | Github </title>
-    <link rel="stylesheet" type="text/css" href='main.css'>
-  </head>
-  <body>
-    <h1 class='test'> Hello World! </h1>
-    <div id="nav">
-      <a href='http://j8n.github.io/globaldatamaps'><div class="nav-options">one</div></a>
-      <div class="nav-options">two</div>
-      <div class="nav-options">three</div>
-      <div class="nav-options">four</div>
-    </div>
-  </body>
+<head>
+	<title>Gravity simulation</title>
+
+<!-- Game Modules-->
+	<script type="text/javascript" src="https://github.com/j8n/GravitySim/blob/master/CelestialBody.js"></script>
+	<script type="text/javascript" src="https://github.com/j8n/GravitySim/blob/master/GravitySim.js"></script>
+
+
+</head>
+<body>
+	<script type="text/javascript">
+		var CelestialBodiesList = [];
+		var G = 1;
+		var T = 0.1;
+		var width = window.innerWidth - 20; //1000;
+		var height = window.innerHeight - 20; //600;
+		var g = new GravityGame(width, height);
+	</script>
+</body>
 </html>
 
