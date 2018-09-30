@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nutrient Calculator</title>
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<div class="page">
+		<nav class="c-nav navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Nutrient Calculator</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto"></ul>
+				<div>
+					Email: info@test.com
+				</div>
+			</div>
+		</nav>
+		
+		<div class="row justify-content-md-center mx-0">
+			<div class="col-10 my-5">
+				<h4>Ingredients</h4>
+				<button class="c-btn btn btn-success my-2" id="calculate-button">Calculate</button>
+				<button class="c-btn btn btn-success my-2" id="add-ingredient-button">Add Ingredient</button>
+				<button class="c-btn btn btn-success my-2" id="remove-last-ingredient-button">Remove Last Ingredient</button>
+				<div class="table-responsive my-2">
+					<table class="c-table table table-bordered">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Ingredient Name</th>
+								<th>Ingredient Amount (g)</th>
+								<th>Energy (kcal) (per 100g)</th>
+								<th>Carbohydrates (per 100g)</th>
+								<th>Sugars (g) (per 100g)</th>
+								<th>Protein (g) (per 100g)</th>
+								<th>Fat, Total (g) (per 100g)</th>
+								<th>Saturated fatty acids (g) (per 100g)</th>
+								<th>Trans fatty acid (g) (per 100g)</th>
+								<th>Sodium (per 100g)</th>
+							</tr>
+						</thead>
+						<tbody id="list-table-body"></tbody>
+					</table>
+				</div><!-- table responsive end -->
+				<div class="table-responsive my-2">
+					<h4>Recipe Nutrition Information</h4>
+					<table width="100%" class="c-table table table-bordered">
+						<tr>
+							<th>Total Amount (g)</th>
+							<th>Total Energy (kcal)</th>
+							<th>Total Carbohydrates</th>
+							<th>Total Sugars (g)</th>
+							<th>Total Protein (g)</th>
+							<th>Total Fat (g)</th>
+							<th>Total Saturated fatty acids (g)</th>
+							<th>Total Trans fatty acid (g)</th>
+							<th>Total Sodium</th>
+						</tr>
+						<tr>
+							<td id="total-amount">0</td>
+							<td id="total-energy">0</td>
+							<td id="total-carbs">0</td>
+							<td id="total-sugars">0</td>
+							<td id="total-protein">0</td>
+							<td id="total-fat">0</td>
+							<td id="total-fat-saturated">0</td>
+							<td id="total-fat-trans">0</td>
+							<td id="total-sodium">0</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>Energy (kcal)</th>
+							<th>Carbohydrates</th>
+							<th>Sugars (g)</th>
+							<th>Protein (g)</th>
+							<th>Fat (g)</th>
+							<th>Saturated fatty acids (g)</th>
+							<th>Trans fatty acid (g)</th>
+							<th>Sodium</th>
+						</tr>
+						<tr>
+							<td></td>
+							<td id="total-energy-percent">0</td>
+							<td id="total-carbs-percent">0</td>
+							<td id="total-sugars-percent">0</td>
+							<td id="total-protein-percent">0</td>
+							<td id="total-fat-percent">0</td>
+							<td id="total-fat-saturated-percent">0</td>
+							<td id="total-fat-trans-percent">0</td>
+							<td id="total-sodium-percent">0</td>
+						</tr>
+					</table>
+				</div><!-- table responsive end -->
+			</div><!-- col end -->
+		</div><!-- row end -->
+	</div><!-- page end -->	
+</body>
+	<script type="text/javascript" src="src/App.js"></script>
+	<script>
+		window.onload = function(){
+			App.setup();
+		}
+	</script>
+</html>
